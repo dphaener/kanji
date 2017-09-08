@@ -1,0 +1,24 @@
+<DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/graphiql/0.8.1/graphiql.min.css" integrity="sha256-M21BwIduyMmxIfyN2SOwMUdtgs/5QfTy3YCqciXGNbA=" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js" integrity="sha256-Rtnfi1MVZAj3v+eDeFjh/iAXo8//D0zVKql8fjVLCiM=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react-dom.min.js" integrity="sha256-uzKwYuH50DHzDYr3h/Bnpv7C5QJNUjHEpVmT3Xuq3ww=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/graphiql/0.8.1/graphiql.min.js" integrity="sha256-3e+07H0vsK+FE6+00S2TdS8xZjq3yrPHtyUlFMs3+Ck=" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script>
+      (function () {
+        const fetcher = function(params) {
+          return fetch(window.location.origin + '/api', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(params),
+          }).then(response => response.json())
+        }
+        ReactDOM.render(React.createElement(GraphiQL, { fetcher }), document.getElementById('app'));
+      })()
+    </script>
+  </body>
+</html>

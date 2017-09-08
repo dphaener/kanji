@@ -1,0 +1,14 @@
+source "https://rubygems.org"
+
+gem "kanji", path: "../../"
+gem "pg"
+
+group :development, :test do
+  gem "pry-byebug", platform: :mri
+end
+
+group :test do
+  gem "database_cleaner"
+  gem "rspec"
+  gem "rom-factory"
+end

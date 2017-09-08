@@ -1,0 +1,13 @@
+require "dry/web/container"
+
+module <%= config[:camel_cased_app_name] %>
+  class Container < Dry::Web::Container
+    configure do
+      config.name = :<%= config[:underscored_project_name] %>
+      config.listeners = true
+      config.auto_register = %w[app]
+    end
+
+    load_paths! "app"
+  end
+end

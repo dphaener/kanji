@@ -1,0 +1,13 @@
+begin
+  require "pry-byebug"
+rescue LoadError
+end
+
+require_relative "<%= config[:underscored_project_name] %>/container"
+
+<%= config[:camel_cased_app_name] %>::Container.start :rom
+<%= config[:camel_cased_app_name] %>::Container.start :graph
+<%= config[:camel_cased_app_name] %>::Container.start :repos
+<%= config[:camel_cased_app_name] %>::Container.finalize!
+
+require "<%= config[:underscored_project_name] %>/application"

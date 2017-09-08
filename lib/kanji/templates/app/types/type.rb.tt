@@ -1,0 +1,26 @@
+require "kanji/type"
+
+module Types
+  class <%= config[:class_name] %> < Kanji::Type
+    name "<%= config[:class_name] %>"
+    description "Replace this description with something useful"
+
+  <% config[:attributes].each do |attribute| -%>
+    attribute :<%= attribute[0] %>, <%= config[:lookup_type].(attribute[1]) %>, "Replace this description"
+  <% end -%>
+
+    register :repo, <%= config[:application_class] %>::Container["repos.<%= config[:pluralized_type_name] %>"]
+
+    create do |object, arguments, context|
+      resolve(:repo).create(arguments.to_h)
+    end
+
+    update do |object, arguments, context|
+      resolve(:repo).update(arguments.to_h)
+    end
+
+    destroy do |object, arguments, context|
+      resolve(:repo).destroy(arguments[:id])
+    end
+  end
+end

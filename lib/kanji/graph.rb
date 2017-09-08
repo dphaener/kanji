@@ -1,0 +1,1 @@
+require "kanji/graph/container"

@@ -1,0 +1,21 @@
+require "graphql"
+require_relative "query_type"
+require_relative "mutation_type"
+
+module <%= config[:camel_cased_app_name] %>
+  class Schema
+    def self.call
+      GraphQL::Schema.define do
+        # This is your schema definition. The lines below have been commented
+        # out because QueryType and MutationType are invalid until they have
+        # fields. Uncomment them as soon as you add some fields to your types.
+        #
+        #query QueryType.new.call
+        #mutation MutationType.new.call
+
+        max_depth 10
+        max_complexity 200
+      end
+    end
+  end
+end

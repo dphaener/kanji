@@ -1,0 +1,7 @@
+require "kanji/repository"
+
+module Repositories
+  class <%= config[:pluralized_class_name] %> < Kanji::Repository[:<%= config[:pluralized_type_name] %>]
+
+  end
+end

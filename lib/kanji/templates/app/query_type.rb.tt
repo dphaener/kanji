@@ -1,0 +1,13 @@
+require "graphql"
+
+class QueryType
+  def call
+    GraphQL::ObjectType.define do
+      name "Query"
+      description "The query root of this schema"
+
+      # Add your root queries here. This object type will be invalid until
+      # you add at least one field.
+    end
+  end
+end
