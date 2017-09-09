@@ -1,3 +1,5 @@
+require_relative "test_post_type"
+
 module Types
   class TestUser < Kanji::Type
     name "TestUser"
