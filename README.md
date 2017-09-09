@@ -1,5 +1,7 @@
 [![Gem Version](https://badge.fury.io/rb/kanji-web.svg)](https://badge.fury.io/rb/kanji-web)
 [![Code Climate](https://codeclimate.com/github/dphaener/kanji/badges/gpa.svg)](https://codeclimate.com/github/dphaener/kanji)
+[![CircleCI](https://circleci.com/gh/dphaener/kanji.svg?style=svg)](https://circleci.com/gh/dphaener/kanji)
+[![Coverage Status](https://coveralls.io/repos/github/dphaener/kanji/badge.svg?branch=master)](https://coveralls.io/github/dphaener/kanji?branch=master)
 
 # Kanji
 
