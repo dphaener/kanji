@@ -1,5 +1,6 @@
 require "dry-struct"
 require "kanji/types"
+require "kanji/type/argument"
 
 module Kanji
   class Type
