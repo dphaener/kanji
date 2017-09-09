@@ -5,9 +5,9 @@ module Types
     name "<%= config[:class_name] %>"
     description "Replace this description with something useful"
 
-  <% config[:attributes].each do |attribute| -%>
+<% config[:attributes].each do |attribute| -%>
     attribute :<%= attribute[0] %>, <%= config[:lookup_type].(attribute[1]) %>, "Replace this description"
-  <% end -%>
+<% end -%>
 
     register :repo, <%= config[:application_class] %>::Container["repos.<%= config[:pluralized_type_name] %>"]
 
