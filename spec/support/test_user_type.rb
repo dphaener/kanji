@@ -9,7 +9,7 @@ module Types
       description "The test name"
     end
 
-    assoc :posts, Kanji::Types::Array.member(TestPost).default([]), "All of the posts for the user"
+    assoc :posts, Kanji::Types::Array.member(Types::TestPost).default([]), "All of the posts for the user"
 
     register :repo, Repositories::TestUsers
 
