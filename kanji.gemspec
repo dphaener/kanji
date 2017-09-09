@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require "kanji/version"
 
 Gem::Specification.new do |s|
-  s.name              = "kanji"
+  s.name              = "kanji-web"
   s.version           = Kanji::Version
   s.summary           = "A strongly Typed GraphQL API"
   s.authors           = ["Darin Haener"]
