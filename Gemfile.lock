@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    kanji (0.1.0)
+    kanji-web (0.2.0)
       dry-auto_inject (~> 0.4)
       dry-container (~> 0.6)
       dry-core (~> 0.3)
@@ -188,7 +188,7 @@ PLATFORMS
 
 DEPENDENCIES
   byebug (~> 9.0)
-  kanji!
+  kanji-web!
   pry-byebug (~> 3.4)
   rainbow (~> 2.2)
   rspec (~> 3.6)
