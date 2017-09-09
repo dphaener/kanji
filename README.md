@@ -1,3 +1,6 @@
+[![Gem Version](https://badge.fury.io/rb/kanji-web.svg)](https://badge.fury.io/rb/kanji-web)
+[![Code Climate](https://codeclimate.com/github/dphaener/kanji/badges/gpa.svg)](https://codeclimate.com/github/dphaener/kanji)
+
 # Kanji
 
 ## Overview
