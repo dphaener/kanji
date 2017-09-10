@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.summary           = "A strongly Typed GraphQL API"
   s.authors           = ["Darin Haener"]
   s.email             = ["dphaener@gmail.com"]
-  s.homepage          = "https://dphaener.github.com/kanji"
+  s.homepage          = "https://github.com/dphaener/kanji"
   s.license           = "MIT"
   s.executables       = ["kanji"]
   s.required_ruby_version = ">= 2.0.0"
