@@ -88,6 +88,7 @@ start exploring!
       def add_db
         add_template("db/sample_data.rb", "db/sample_data.rb")
         add_template("db/seed.rb", "db/seed.rb")
+        add_template(".keep", "db/migrate/.keep")
       end
 
       def add_app
