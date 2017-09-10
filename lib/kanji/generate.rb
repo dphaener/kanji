@@ -1,5 +1,6 @@
 require "pathname"
 require "thor"
+require "fileutils"
 
 module Kanji
   class Generate
