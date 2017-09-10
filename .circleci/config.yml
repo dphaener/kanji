@@ -7,7 +7,7 @@ jobs:
       - checkout
 
       - type: cache-restore
-        key: kanji-{{ checksum "Gemfile.lock" }}
+        key: kanji-{{ checksum "kanji.gemspec" }}
 
       - run: bundle install --path vendor/bundle
 

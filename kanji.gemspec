@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.summary           = "A strongly Typed GraphQL API"
   s.authors           = ["Darin Haener"]
   s.email             = ["dphaener@gmail.com"]
-  s.homepage          = "https://dphaener.github.com/kanji"
+  s.homepage          = "https://github.com/dphaener/kanji"
   s.license           = "MIT"
   s.executables       = ["kanji"]
   s.required_ruby_version = ">= 2.0.0"
@@ -40,6 +40,7 @@ Gem::Specification.new do |s|
   s.add_dependency "tilt", "~> 2.0"
   s.add_dependency "transproc", "~> 1.0"
 
+  s.add_development_dependency "bundler", "~> 1.15"
   s.add_development_dependency "byebug", "~> 9.0"
   s.add_development_dependency "coveralls", "~> 0.8"
   s.add_development_dependency "pry-byebug", "~> 3.4"
