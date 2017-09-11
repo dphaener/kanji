@@ -1,3 +1,3 @@
 module Kanji
-  Version = "0.2.1".freeze
+  Version = "0.2.2".freeze
 end
