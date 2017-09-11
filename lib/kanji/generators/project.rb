@@ -72,7 +72,7 @@ start exploring!
       end
 
       def camel_cased_app_name
-        Dry::Core::Inflector.camelize(app_name)
+        Dry::Core::Inflector.camelize(underscored_project_name)
       end
 
       def add_bin
