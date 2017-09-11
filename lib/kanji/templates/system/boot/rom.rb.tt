@@ -1,10 +1,10 @@
+require "sequel"
+require "rom"
+require "rom/sql"
+
 <%= config[:camel_cased_app_name] %>::Container.namespace :persistence do |container|
   container.finalize :rom do
     init do
-      require "sequel"
-      require "rom"
-      require "rom/sql"
-
       use :settings
       use :monitor
 

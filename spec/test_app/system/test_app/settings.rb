@@ -1,9 +1,9 @@
 require "dry/web/settings"
-require "types"
+require "kanji/types"
 
 module TestApp
   class Settings < Dry::Web::Settings
-    setting :database_url, Types::Strict::String.constrained(filled: true)
-    setting :session_secret, Types::Strict::String.constrained(filled: true)
+    setting :database_url, Kanji::Types::Strict::String.constrained(filled: true)
+    setting :env, Kanji::Types::Strict::String.default("development")
   end
 end

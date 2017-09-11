@@ -1,10 +1,10 @@
+require "sequel"
+require "rom"
+require "rom/sql"
+
 TestApp::Container.namespace :persistence do |container|
   container.finalize :rom do
     init do
-      require "sequel"
-      require "rom"
-      require "rom/sql"
-
       use :settings
       use :monitor
 

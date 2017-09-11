@@ -1,6 +1,3 @@
-require "dry/system/container"
-require "kanji/graph/container"
-
 module Kanji
   class Container < Dry::System::Container
     configure do |config|

@@ -17,8 +17,11 @@ module Kanji
     map "g" => "generate"
 
     desc "server", "Start the application server"
+    method_option :port, default: 3300, aliases: "p"
     def server
-      `shotgun config.ru`
+      require "kanji/cli/server"
+      require_relative "#{Dir.pwd}/system/boot"
+      CLI::Server.start(options)
     end
 
     map "s" => "server"
