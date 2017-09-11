@@ -18,7 +18,7 @@ module Kanji
 
     desc "server", "Start the application server"
     def server
-      `shotgun config.ru > stdout`
+      `shotgun config.ru`
     end
 
     map "s" => "server"
