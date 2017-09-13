@@ -1,7 +1,7 @@
 PATH
   remote: ../..
   specs:
-    kanji-web (0.2.2)
+    kanji-web (0.3.0)
       bundler (~> 1.15)
       dry-auto_inject (~> 0.4)
       dry-container (~> 0.6)

@@ -1,0 +1,10 @@
+engines:
+  rubocop:
+    enabled: true
+    checks:
+      Rubocop/Style/StringLiteralsInInterpolation:
+        enabled: false
+      Rubocop/Style/WordArray:
+        enabled: false
+      Rubocop/Metrics/LineLength:
+        max: 100

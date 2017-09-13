@@ -8,10 +8,9 @@ module Kanji
       def configure(&block)
         super.configure_stdout_logger
 
-        if self[:settings][:env] == "development"
-          rack_logger = Dry::Monitor::Rack::Logger.new(self[:stdout_logger])
-          rack_logger.attach(self[:rack_monitor])
-        end
+        return unless self[:settings][:env] == "development"
+        rack_logger = Dry::Monitor::Rack::Logger.new(self[:stdout_logger])
+        rack_logger.attach(self[:rack_monitor])
       end
 
       def configure_stdout_logger
