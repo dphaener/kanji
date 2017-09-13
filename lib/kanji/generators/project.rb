@@ -49,7 +49,7 @@ end
 Now open up `app/schema.rb` and uncomment the lines that add the
 query and mutation types.
 
-Start your server: `kanji s` and visit `localhost:9393/graphiql` and
+Start your server: `kanji s` and visit `localhost:3300/graphiql` and
 start exploring!
         TEXT
 
