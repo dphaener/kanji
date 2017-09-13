@@ -1,3 +1,5 @@
+require "dry/system/container"
+
 module Kanji
   class Container < Dry::System::Container
     configure do |config|
