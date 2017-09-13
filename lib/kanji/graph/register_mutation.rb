@@ -1,6 +1,7 @@
 require "graphql"
 require "dry-initializer"
 require "kanji/types"
+require "kanji/type/attribute"
 require "kanji/graph/coerce_type"
 
 module Kanji
