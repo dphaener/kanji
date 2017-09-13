@@ -1,7 +1,6 @@
 require "roda"
 require "roda/plugins/flow"
 require "dry-configurable"
-require "dry-monitor"
 
 module Kanji
   class Application < ::Roda
