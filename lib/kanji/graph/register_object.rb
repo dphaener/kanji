@@ -9,9 +9,9 @@ module Kanji
     class RegisterObject
       extend Dry::Initializer
 
-      option :attributes, Types::Strict::Array.member(Type::Attribute)
-      option :name, Types::Strict::String
-      option :description, Types::Strict::String, optional: true
+      option :attributes, Kanji::Types::Strict::Array.member(Type::Attribute)
+      option :name, Kanji::Types::Strict::String
+      option :description, Kanji::Types::Strict::String, optional: true
 
       def call
         name = "#{self.name}Type"

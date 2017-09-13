@@ -8,11 +8,11 @@ module Kanji
     class RegisterMutation
       extend Dry::Initializer
 
-      option :return_type, Types::Class
-      option :attributes, Types::Strict::Array.member(Type::Attribute)
-      option :name, Types::Strict::String
-      option :description, Types::Strict::String, optional: true
-      option :resolve, Types::Callable
+      option :return_type, Kanji::Types::Class
+      option :attributes, Kanji::Types::Strict::Array.member(Type::Attribute)
+      option :name, Kanji::Types::Strict::String
+      option :description, Kanji::Types::Strict::String, optional: true
+      option :resolve, Kanji::Types::Callable
 
       def call
         return_type = self.return_type
