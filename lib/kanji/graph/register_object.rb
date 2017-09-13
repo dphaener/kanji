@@ -9,7 +9,7 @@ module Kanji
     class RegisterObject
       extend Dry::Initializer
 
-      option :attributes, Kanji::Types::Strict::Array.member(Type::Attribute)
+      option :attributes, Kanji::Types::Strict::Array.member(Kanji::Type::Attribute)
       option :name, Kanji::Types::Strict::String
       option :description, Kanji::Types::Strict::String, optional: true
 

@@ -9,7 +9,7 @@ module Kanji
       extend Dry::Initializer
 
       option :return_type, Kanji::Types::Class
-      option :attributes, Kanji::Types::Strict::Array.member(Type::Attribute)
+      option :attributes, Kanji::Types::Strict::Array.member(Kanji::Type::Attribute)
       option :name, Kanji::Types::Strict::String
       option :description, Kanji::Types::Strict::String, optional: true
       option :resolve, Kanji::Types::Callable
