@@ -10,4 +10,4 @@ TestApp::Container.start :graph
 TestApp::Container.start :repos
 TestApp::Container.finalize!
 
-require "test_app/application"
+require_relative "test_app/application"

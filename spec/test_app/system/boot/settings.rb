@@ -1,8 +1,6 @@
-TestApp::Container.finalize :settings do |container|
-  init do
-    require "test_app/settings"
-  end
+require "test_app/settings"
 
+TestApp::Container.finalize :settings do |container|
   start do
     settings = TestApp::Settings.load(container.config.root, container.config.env)
     container.register "settings", settings

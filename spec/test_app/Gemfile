@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
-gem "kanji", path: "../../"
+gem "kanji-web", path: "../../"
 gem "pg"
 
 group :development, :test do

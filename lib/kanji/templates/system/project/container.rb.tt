@@ -1,7 +1,7 @@
-require "dry/web/container"
+require "kanji/web_container"
 
 module <%= config[:camel_cased_app_name] %>
-  class Container < Dry::Web::Container
+  class Container < Kanji::WebContainer
     configure do
       config.name = :<%= config[:underscored_project_name] %>
       config.listeners = true

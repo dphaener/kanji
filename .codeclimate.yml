@@ -1,0 +1,21 @@
+engines:
+  duplication:
+    enabled: true
+    config:
+      languages:
+        - ruby
+  fixme:
+    enabled: true
+  rubocop:
+    enabled: true
+    checks:
+      Rubocop/Style/StringLiteralsInInterpolation:
+        enabled: false
+      Rubocop/Style/WordArray:
+        enabled: false
+      Rubocop/Metrics/LineLength:
+        enabled: true
+        max: 100
+ratings:
+  paths:
+    - "**.rb"
