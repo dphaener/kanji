@@ -17,29 +17,27 @@ module Kanji
 
       TYPE_MAP = {
         "String" => "String",
+        "NilClass | String" => "String",
         "Integer" => "Int",
+        "NilClass | Integer" => "Int",
         "Float" => "Float",
+        "NilClass | Float" => "Float",
         "FalseClass" => "Boolean",
         "TrueClass | FalseClass" => "Boolean",
-        "FalseClass | TrueClass" => "Boolean"
+        "FalseClass | TrueClass" => "Boolean",
+        "NilClass | TrueClass | FalseClass" => "Boolean"
       }
 
       def self.get_graphql_type(type)
         return type if type.is_a?(GraphQL::ObjectType)
 
-        type_string = TYPE_MAP[get_primitive_type(type)]
+        type_string = TYPE_MAP[type.name]
 
         if type.optional?
           GraphQL::Define::TypeDefiner.instance.send(type_string)
         else
           !GraphQL::Define::TypeDefiner.instance.send(type_string)
         end
-      end
-
-      def self.get_primitive_type(type)
-        type.optional? ?
-          type.right.primitive.to_s :
-          type.primitive.to_s
       end
 
       def self.get_member_type(type)
